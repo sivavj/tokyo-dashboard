@@ -53,6 +53,11 @@ const menuItems: MenuItems[] = [
         icon: MmsTwoToneIcon,
         link: '/dashboards/messenger'
       },
+      {
+        name: 'Reports',
+        icon: TrafficTwoToneIcon,
+        link: '/dashboards/table'
+      }
     ]
   },
   {

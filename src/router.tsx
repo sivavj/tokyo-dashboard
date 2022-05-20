@@ -20,6 +20,7 @@ const Overview = Loader(lazy(() => import('src/content/overview')));
 // Dashboards
 
 const Crypto = Loader(lazy(() => import('src/content/dashboards/Crypto')));
+const BasicTable = Loader(lazy(() => import('src/content/dashboards/Reports')))
 
 // Applications
 
@@ -124,6 +125,10 @@ const routes: RouteObject[] = [
       {
         path: 'messenger',
         element: <Messenger />
+      },
+      {
+        path: 'table',
+        element: <BasicTable/>
       }
     ]
   },
