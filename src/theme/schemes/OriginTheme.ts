@@ -2,18 +2,6 @@ import '@mui/lab/themeAugmentation';
 
 import { alpha, createTheme, darken, lighten } from '@mui/material';
 
-/***
- * マテリアルカラー 一覧
- *  @see: https://mui.com/material-ui/customization/color/#color-palette
- * Example: マテリアルカラーから実数値(色番号)で設置する場合
- *  import { blueGrey } from '@mui/material/colors';
- *  const blueGrey100 = blueGrey[100]; など
- */
-
-/***
- * lighter設置のための型拡張
- *  @see: https://mui.com/material-ui/customization/palette/
- */
 declare module '@mui/material/styles' {
   interface PaletteColor {
     lighter?: string;
@@ -27,16 +15,12 @@ declare module '@mui/material/styles' {
   }
 }
 
-// TODO: rem変換計算用
 const fontPxToRem = (px: number) => {
   return px / 16 + 'rem';
 };
-// console.log('fontSize:' + `${fontPxToRem(24)}`); // fontSize:1.5rem
-// レスポンシブ縮小サイズ
 const fontPxToRemMinim = (px: number) => {
   return (px / 16) * 0.85 + 'rem';
 };
-// console.log('fontSizeMinim:' + `${fontPxToRemMinim(24)}`); // fontSizeMinim:1.275rem
 
 const themeColors = {
   primary: '#1A75FF',
